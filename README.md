@@ -1,5 +1,5 @@
 
-<h1 align="center">Anymate💫: A Dataset and Baselines for Learning 3D Object Rigging</h1>
+<h1 align="center">🪄Anymate: A Dataset and Baselines for Learning 3D Object Rigging</h1>
   <p align="center">
     <a href="https://yfde.cc/"><strong>Yufan Deng*</strong></a>
     &nbsp;&nbsp;
