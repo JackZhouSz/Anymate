@@ -1,0 +1,46 @@
+args:
+  aggr: max
+  checkpoint: Anymate/checkpoints
+  device: cuda
+  epochs: 4000
+  finetune: true
+  gamma: 0.2
+  input_normal: false
+  logdir: Anymate/logs
+  loss: chamfer
+  mode: diffusion
+  resume: ''
+  root: Anymate/data
+  schedule: []
+  start_epoch: 0
+  test_batch: 1
+  testset: Anymate_test
+  train_batch: 16
+  trainset: Anymate_train
+  test_freq: 1000
+  num_train_step: 100
+  num_training_points: 128
+  seed: 42
+
+optimizer: 
+  weight_decay: 1.0e-05
+  lr: 0.0001
+  
+model:
+  encoder: bert
+  decoder: Pointe_Diffusion
+  config_path: ./ThirdParty/michelangelo/configs/aligned_shape_latents/shapevae-256.yaml
+  ckpt_path: ./ThirdParty/michelangelo/checkpoints/aligned_shape_latents/shapevae-256.ckpt
+  input_channels: 3
+  output_channels: 3
+  n_ctx: 128
+  width: 768
+  layers: 12
+  heads: 8
+  init_scale: 0.25
+  time_token_cond: true
+  cond_drop_prob: 0.1
+  use_projection: true
+
+
+  

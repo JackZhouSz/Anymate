@@ -1,0 +1,2 @@
+cd ThirdParty/michelangelo/checkpoints/aligned_shape_latents
+wget "https://huggingface.co/Maikou/Michelangelo/resolve/main/checkpoints/aligned_shape_latents/shapevae-256.ckpt?download=true" -O shapevae-256.ckpt
