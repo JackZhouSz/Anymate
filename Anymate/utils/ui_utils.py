@@ -235,7 +235,17 @@ def process_input(mesh_file):
         return None, None, None, None, None, None, None, None
     
     # make folder for tmp files
-    os.makedirs(f"Anymate/tmp/{mesh_file.split('/')[-1].replace('.obj', '')}", exist_ok=True)
+    if mesh_file.endswith('.obj'):
+        os.makedirs(f"Anymate/tmp/{mesh_file.split('/')[-1].replace('.obj', '')}", exist_ok=True)
+    else:
+        os.makedirs(f"Anymate/tmp/{mesh_file.split('/')[-1].replace('.glb', '')}", exist_ok=True)
+        abs_path = os.path.abspath(mesh_file)
+
+        os.system(f"python Convert.py --path {abs_path}")
+
+        mesh_file = abs_path.replace('.glb', '.obj')
+        while not os.path.exists(mesh_file):
+            time.sleep(1)
 
     normalized_mesh = normalize_mesh(trimesh.load(mesh_file))
     normalized_mesh_file = f"Anymate/tmp/{mesh_file.split('/')[-1].replace('.obj', '')}/object.obj"
@@ -249,7 +259,7 @@ def process_input(mesh_file):
 
     # print(pc.shape, pc.max(dim=0), pc.min(dim=0))
 
-    return normalized_mesh_file, vis_file, vis_file, None, pc, None, None, None
+    return normalized_mesh_file, None, None, None, pc, None, None, None
 
 
 def get_model(checkpoint):

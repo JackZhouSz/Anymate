@@ -260,7 +260,7 @@ class EncoderDecoder(nn.Module):
                     )
         
         if encoder == 'bert':
-            if self.load_bert == 'checkpoint':
+            if self.load_bert:
                 model_name = 'RunsenXu/PointLLM_7B_v1.2'
                 model = PointLLMLlamaForCausalLM.from_pretrained(model_name, low_cpu_mem_usage=False, use_cache=True, torch_dtype=dtype)
                 self.encoder = model.model.point_backbone.to(device)
