@@ -130,3 +130,19 @@ download blender at https://download.blender.org/release/Blender4.0/blender-4.0.
 
 ## 📜Acknowledgement
 Third party codebases include [Objaverse XL](https://github.com/allenai/objaverse-xl), [Michelangelo](https://github.com/NeuralCarver/Michelangelo), [PointLLM](https://github.com/OpenRobotLab/PointLLM), [EG3D](https://github.com/NVlabs/eg3d.git), [RigNet](https://github.com/zhan-xu/RigNet)
+
+## Citation
+If you find Anymate useful for your work please cite:
+```
+@inproceedings{deng2025anymate,
+  author       = {Yufan Deng and Yuhao Zhang and Chen Geng and Shangzhe Wu and Jiajun Wu},
+  title        = {Anymate: A Dataset and Baselines for Learning 3D Object Rigging},
+  booktitle    = {Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers (SIGGRAPH Conference Papers '25)},
+  year         = {2025},
+  month        = aug,
+  address      = {Vancouver, BC, Canada},
+  publisher    = {Association for Computing Machinery},
+  location     = {Vancouver, BC, Canada},
+  note         = {August 10–14, 2025}
+}
+```
