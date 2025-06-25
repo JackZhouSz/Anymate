@@ -121,11 +121,11 @@ They can be loaded by `dataset = torch.load('Anymate_xxx.pt')`. The dataset is a
 
 ### Dataset Processing Script
 
-The script that process the object id in Objaverse-XL into the downloaded pytorch tensor dataset can be run by:
+The script that processes the object id in Objaverse-XL into the provided pytorch tensor dataset can be run by:
 ```bash
 python Dataset_process.py
 ```
-download blender at https://download.blender.org/release/Blender4.0/blender-4.0.0-linux-x64.tar.xz and unzip it to `ThirdParty/blender-4.0.0-linux-x64`
+Before running the processing script, please download blender at https://download.blender.org/release/Blender4.0/blender-4.0.0-linux-x64.tar.xz and unzip it to `ThirdParty/blender-4.0.0-linux-x64`
 
 
 ## 📜Acknowledgement
